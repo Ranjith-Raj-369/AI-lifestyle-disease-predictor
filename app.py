@@ -166,14 +166,13 @@ def assemble_input_row() -> pd.DataFrame:
     # Ensure the DataFrame exactly matches the feature order used in training
     df = pd.DataFrame([row])
     missing = [c for c in feature_order if c not in df.columns]
-    for c in missing:
-        # If a column existed during training but isn't collected in the UI,
-        # set to a reasonable default (zeros). Adjust if you know better defaults.
-        df[c] = 0
+for c in missing:
+    df[c] = 0
 
-    # Drop any unexpected columns not present at training time, then order
-    df = df[[c for c in feature_order if c in df.columns]]
-    return df
+# Ensure exact column order
+df = df.reindex(columns=feature_order)
+
+return df
 
 # -----------------------------
 # Predict
