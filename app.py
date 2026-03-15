@@ -183,8 +183,8 @@ def predict_one(df_row: pd.DataFrame):
     df_row = df_row.reindex(columns=feature_order)
 
     # Convert to numeric
-    for col in df_row.columns:
-        df_row = df_row.apply(lambda col: pd.to_numeric(col, errors="coerce"))
+    # Convert to numeric
+df_row = df_row.apply(lambda col: pd.to_numeric(col, errors="coerce"))
 
     # Fill missing values
     df_row = df_row.fillna(0)
