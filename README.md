@@ -39,12 +39,9 @@ The app allows users to input daily lifestyle habits and receive a **personalize
 # 📑 Table of Contents
 - [Overview](#-overview)
 - [Project Structure](#-project-structure)
-- [Demo Preview](#-demo-preview)
 - [Features](#-features)
 - [Dataset](#-dataset)
 - [Modeling Workflow](#-modeling-workflow)
-- [How to Run Locally](#-how-to-run-locally)
-- [Streamlit App](#-streamlit-app)
 - [Model Performance](#-model-performance)
 - [Technologies Used](#-technologies-used)
 - [Future Enhancements](#-future-enhancements)
