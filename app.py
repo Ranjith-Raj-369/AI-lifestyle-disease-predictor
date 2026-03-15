@@ -1,6 +1,3 @@
-# This will create (or overwrite) the file app.py
-print("Your Streamlit app will go here!")
-# -----------------------------
 # AI-Driven Lifestyle Disease Predictor — Streamlit App
 # -----------------------------
 # Expects files created in your notebooks:
@@ -17,7 +14,7 @@ import os
 
 if not os.path.exists("model.pkl"):
     with zipfile.ZipFile("model.zip", "r") as zip_ref:
-        zip_ref.extractall()
+    zip_ref.extractall(".")
         
 import json
 import pickle
