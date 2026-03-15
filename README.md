@@ -3,10 +3,6 @@
 # 🧬 AI-Driven Lifestyle Disease Predictor
 ### *End-to-End Machine Learning | Predictive Analytics Project*
 
-## Application Preview
-
-![Dashboard](dashboard.png)
-
 <div align="center">
 
 ![Python](https://img.shields.io/badge/Python-3.10+-blue?logo=python)
@@ -16,6 +12,12 @@
 ![License](https://img.shields.io/badge/Use-Educational-green)
 
 </div>
+
+---
+
+## Application Preview
+
+![Dashboard](dashboard.png)
 
 ---
 
