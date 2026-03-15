@@ -28,7 +28,7 @@ import pandas as pd
 import streamlit as st
 
 
-MODELS_DIR = Path(__file__).resolve().parent / "models"
+MODELS_DIR = Path(__file__).resolve().parent
 MODEL_PATH = MODELS_DIR / "model.pkl"
 FEATURES_PATH = MODELS_DIR / "feature_order.pkl"
 THRESHOLD_PATH = MODELS_DIR / "threshold.json"
