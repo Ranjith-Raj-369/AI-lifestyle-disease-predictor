@@ -1,4 +1,4 @@
-[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)]
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://ai-lifestyle-disease-predictor-beta.streamlit.app/)
 
 # 🧬 AI-Driven Lifestyle Disease Predictor
 ### *End-to-End Machine Learning | Predictive Analytics Project*
@@ -25,7 +25,7 @@
 
 The application is deployed using **Streamlit Community Cloud**, allowing users to access the model through a web interface.
 
-Live Application:
+Live Application: https://ai-lifestyle-disease-predictor-beta.streamlit.app/
 
 ---
 
