@@ -8,3 +8,4 @@ streamlit
 shap
 imbalanced-learn
 altair==4.2.2
+imghdr
