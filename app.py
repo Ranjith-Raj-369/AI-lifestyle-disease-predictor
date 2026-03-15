@@ -12,7 +12,13 @@ print("Your Streamlit app will go here!")
 # You can run locally from the /app folder with:
 #   streamlit run app.py
 # -----------------------------
+import zipfile
+import os
 
+if not os.path.exists("model.pkl"):
+    with zipfile.ZipFile("model.zip", "r") as zip_ref:
+        zip_ref.extractall()
+        
 import json
 import pickle
 from pathlib import Path
