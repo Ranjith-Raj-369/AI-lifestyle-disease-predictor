@@ -163,13 +163,13 @@ def assemble_input_row() -> pd.DataFrame:
         # NOTE: do NOT include target ("chronic_disease") in features
     }
 
-    # Ensure the DataFrame exactly matches the feature order used in training
+# Ensure the DataFrame exactly matches the feature order used in training
         df = pd.DataFrame([row])
         missing = [c for c in feature_order if c not in df.columns]
         for c in missing:
             df[c] = 0
 
-    # Ensure exact column order
+        # Ensure exact column order
         df = df.reindex(columns=feature_order)
 
         return df
