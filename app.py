@@ -179,13 +179,16 @@ def assemble_input_row() -> pd.DataFrame:
 # -----------------------------
 def predict_one(df_row: pd.DataFrame):
 
-    # Ensure same column order
+    # Ensure correct column order
     df_row = df_row.reindex(columns=feature_order)
 
-    # Convert numeric values safely
-    df_row = df_row.apply(lambda col: pd.to_numeric(col, errors="coerce"))
+    # Convert to numeric
+    for col in df_row.columns:
+        df_row[col] = pd.to_numeric(df_row[col], errors="coerce")
 
-    # Prediction
+    # Fill missing values
+    df_row = df_row.fillna(0)
+
     prob = float(model.predict_proba(df_row)[0, 1])
     pred_label = int(prob >= best_threshold)
 
