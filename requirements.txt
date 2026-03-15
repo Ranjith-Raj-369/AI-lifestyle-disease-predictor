@@ -1,10 +1,10 @@
-pandas==2.2.2
-numpy==1.26.4
+pandas
+numpy
 matplotlib
 seaborn
-scikit-learn==1.4.2
+scikit-learn
 xgboost
-streamlit>=1.33.0
+streamlit>=1.33
 shap
 imbalanced-learn
-altair==4.2.2
+altair
