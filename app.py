@@ -180,7 +180,7 @@ def assemble_input_row() -> pd.DataFrame:
 # -----------------------------
 def predict_one(df_row: pd.DataFrame):
     # model is a Pipeline: [Imputer -> Scaler -> Classifier]
-    prob = float(model.predict_proba(df_row)[:, 1][0])
+    prob = float(model.predict_proba(df_row)[0, 1])
     pred_label = int(prob >= best_threshold)
     return prob, pred_label
 
