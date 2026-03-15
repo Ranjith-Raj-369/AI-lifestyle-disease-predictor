@@ -184,7 +184,7 @@ def predict_one(df_row: pd.DataFrame):
 
     # Convert to numeric
     for col in df_row.columns:
-        df_row[col] = pd.to_numeric(df_row[col], errors="coerce")
+        df_row = df_row.apply(lambda col: pd.to_numeric(col, errors="coerce"))
 
     # Fill missing values
     df_row = df_row.fillna(0)
