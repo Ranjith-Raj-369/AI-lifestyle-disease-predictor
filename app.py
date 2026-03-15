@@ -9,6 +9,14 @@
 # You can run locally from the /app folder with:
 #   streamlit run app.py
 # -----------------------------
+
+import sys
+import types
+
+# Fix for Python 3.13+ where imghdr was removed
+if "imghdr" not in sys.modules:
+    sys.modules["imghdr"] = types.ModuleType("imghdr")
+    
 import zipfile
 import os
 
