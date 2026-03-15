@@ -1,5 +1,11 @@
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)]
+
 # 🧬 AI-Driven Lifestyle Disease Predictor
 ### *End-to-End Machine Learning | Predictive Analytics Project*
+
+## Application Preview
+
+![Dashboard](dashboard.png)
 
 <div align="center">
 
@@ -10,6 +16,14 @@
 ![License](https://img.shields.io/badge/Use-Educational-green)
 
 </div>
+
+---
+
+## Deployment
+
+The application is deployed using **Streamlit Community Cloud**, allowing users to access the model through a web interface.
+
+Live Application:
 
 ---
 
@@ -69,18 +83,6 @@ The app allows users to input daily lifestyle habits and receive a **personalize
 │
 ├── requirements.txt
 └── README.md
-
-
----
-
-## 📸 Demo Preview
-
-Below is a preview of the deployed Streamlit app:
-
-<p align="center">
-  <img src="report/app_preview.png" alt="App Preview" width="800"/>
-</p>
-
 
 ---
 
@@ -154,40 +156,6 @@ Below is a preview of the deployed Streamlit app:
 
 ---
 
-# 🖥️ How to Run Locally
-
-### ✅ Step 1 — Install dependencies
-pip install -r requirements.txt
-
-
-### ✅ Step 2 — Start the Streamlit app
-cd app
-streamlit run app.py
-
-
-### ✅ Step 3 — Open your browser
-Navigate to:
-http://localhost:8501
-
-
----
-
-# 🌐 Streamlit App (Deployment Ready)
-
-If deploying to Streamlit Cloud:
-
-1. Push repository to GitHub  
-2. Go to https://share.streamlit.io  
-3. Select repo  
-4. Choose  
-app/app.py
-
-yaml
-Copy code
-5. Set Python version to 3.10+  
-6. Deploy 🚀
-
----
 
 # 📈 Model Performance
 
@@ -232,13 +200,6 @@ This tool is **strictly for educational purposes**.
 It is **not a medical device** and must not be used for real clinical decisions.
 
 ---
-
-## Deployment
-
-The application is deployed using **Streamlit Community Cloud**, allowing users to access the model through a web interface.
-
-Live Application:
-(Add your Streamlit deployment link here)
 
 ## Author
 
