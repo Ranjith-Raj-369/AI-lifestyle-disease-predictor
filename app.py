@@ -183,7 +183,7 @@ def predict_one(df_row: pd.DataFrame):
     df_row = df_row.reindex(columns=feature_order)
 
     # Convert numeric values safely
-    df_row = df_row.apply(pd.to_numeric, errors="ignore")
+    df_row = df_row.apply(lambda col: pd.to_numeric(col, errors="coerce"))
 
     # Prediction
     prob = float(model.predict_proba(df_row)[0, 1])
