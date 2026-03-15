@@ -22,7 +22,7 @@ import os
 
 if not os.path.exists("model.pkl"):
     with zipfile.ZipFile("model.zip", "r") as zip_ref:
-    zip_ref.extractall(".")
+        zip_ref.extractall(".")
         
 import json
 import pickle
