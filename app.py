@@ -179,9 +179,15 @@ def assemble_input_row() -> pd.DataFrame:
 # Predict
 # -----------------------------
 def predict_one(df_row: pd.DataFrame):
-    # model is a Pipeline: [Imputer -> Scaler -> Classifier]
+
+    # ensure correct feature order
+    df_row = df_row.reindex(columns=feature_order)
+
+    # prediction
     prob = float(model.predict_proba(df_row)[0, 1])
+
     pred_label = int(prob >= best_threshold)
+
     return prob, pred_label
 
 if submitted:
