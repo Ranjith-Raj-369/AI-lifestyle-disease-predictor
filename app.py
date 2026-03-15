@@ -179,16 +179,14 @@ def assemble_input_row() -> pd.DataFrame:
 # Predict
 # -----------------------------
 def predict_one(df_row: pd.DataFrame):
-    # Ensure the dataframe has the same columns and order as training
+
+    # Ensure same column order
     df_row = df_row.reindex(columns=feature_order)
 
-    # Cast numeric columns to float (helps sklearn imputers)
-    numeric_cols = ["age", "height", "weight", "bmi", "stress_level", "sleep_hours"]
-    for c in numeric_cols:
-        if c in df_row.columns:
-            df_row[c] = pd.to_numeric(df_row[c], errors="coerce")
+    # Convert numeric values safely
+    df_row = df_row.apply(pd.to_numeric, errors="ignore")
 
-    # Make prediction
+    # Prediction
     prob = float(model.predict_proba(df_row)[0, 1])
     pred_label = int(prob >= best_threshold)
 
