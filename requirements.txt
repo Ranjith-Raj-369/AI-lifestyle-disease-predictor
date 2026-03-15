@@ -4,7 +4,7 @@ matplotlib
 seaborn
 scikit-learn
 xgboost
-streamlit
+streamlit>=1.33.0
 shap
 imbalanced-learn
 altair==4.2.2
