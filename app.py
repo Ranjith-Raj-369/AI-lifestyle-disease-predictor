@@ -49,17 +49,15 @@ def load_model():
 
 @st.cache_resource(show_spinner=False)
 def load_feature_order():
-    with open(FEATURES_PATH, "rb") as f:
-        return pickle.load(f)
+    import joblib
+    return joblib.load(FEATURES_PATH)
 
 @st.cache_resource(show_spinner=False)
 def load_threshold(default=0.5):
+    import joblib
     if THRESHOLD_PATH.exists():
         try:
-            with open(THRESHOLD_PATH, "r", encoding="utf-8") as f:
-                data = json.load(f)
-            thr = float(data.get("best_threshold", default))
-            return min(max(thr, 0.0), 1.0)  # clamp
+            return joblib.load(THRESHOLD_PATH)
         except Exception:
             return default
     return default
