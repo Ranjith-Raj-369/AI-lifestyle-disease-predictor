@@ -36,7 +36,7 @@ import streamlit as st
 MODELS_DIR = Path(__file__).resolve().parent
 MODEL_PATH = MODELS_DIR / "model.pkl"
 FEATURES_PATH = MODELS_DIR / "feature_order.pkl"
-THRESHOLD_PATH = MODELS_DIR / "threshold.json"
+THRESHOLD_PATH = MODELS_DIR / "threshold.pkl"
 ENCODERS_PATH = MODELS_DIR / "encoders.pkl"  # optional
 
 # -----------------------------
