@@ -44,8 +44,8 @@ ENCODERS_PATH = MODELS_DIR / "encoders.pkl"  # optional
 # -----------------------------
 @st.cache_resource(show_spinner=False)
 def load_model():
-    with open(MODEL_PATH, "rb") as f:
-        return pickle.load(f)
+    import joblib
+    return joblib.load(MODEL_PATH)
 
 @st.cache_resource(show_spinner=False)
 def load_feature_order():
