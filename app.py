@@ -77,8 +77,8 @@ def load_encoders():
     }
     if ENCODERS_PATH.exists():
         try:
-            with open(ENCODERS_PATH, "rb") as f:
-                loaded = pickle.load(f)
+            import joblib
+            loaded = joblib.load(ENCODERS_PATH)
             # Merge in anything missing
             for k, v in defaults.items():
                 loaded.setdefault(k, v)
